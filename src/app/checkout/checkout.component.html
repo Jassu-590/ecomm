@@ -1,0 +1,27 @@
+<div class="container">
+  <h1 style="text-align: center;">Checkout</h1>
+  <p style="text-align: center;font-weight: bold;color: green;">{{ordermsg}}</p>
+  <div class="row justify-content-between">
+    <div>
+      <form #orderform="ngForm" (ngSubmit)="orderNow(orderform.value)">
+        <div class="form-group">
+          <label >Email:</label>
+          <input type="email"  name="email" required ngModel />
+        </div>
+        <div class="form-group">
+          <label >Address:</label>
+          <textarea  name="address" required ngModel></textarea>
+        </div>
+        <div class="form-group">
+          <label >Contact Number:</label>
+          <input type="text"  name="contact" required ngModel />
+        </div>
+        <h3>Total Amount:<span><i class="bi bi-currency-rupee"></i></span>{{totalprice}}/-</h3><br>
+        <h3>Payment Method: Pay on Delivery</h3><br>
+        <div style="text-align: center;">
+        <button type="submit" class="text-center btn btn-outline-dark" >Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

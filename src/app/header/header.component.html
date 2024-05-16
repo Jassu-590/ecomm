@@ -1,0 +1,89 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="font-size: medium;">
+    <div class="container">
+      <a class="nav-link fw-bold " routerLink="" style="color: blueviolet;">E-COMM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="menytype==='default'">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link fw-bold text-light " aria-current="page" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light " routerLink="seller-auth">Seller</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" routerLink="/user-auth" >Login|SignUp</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" href="#" tabindex="-1" aria-disabled="true"><span><i class="bi bi-cart fs-5"></i></span>({{addtocartcount}})</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 border rounded-pill" type="text" placeholder="Search" aria-label="Search" style="font-size: medium;width: 400px;" (keyup)="searchproducts($event)" (blur)="hidesearch()" #searchinput>
+          <button class="btn btn-outline-success fw-bold" type="submit" style="font-size: medium;" (click)="searchquery(searchinput.value)">Search</button>
+          <ul class="suggested" style="list-style-type: none;" *ngIf="searchresult">
+            <li *ngFor="let item of searchresult" >
+              <a style="color:black;" (mousedown)="redirecttodetails(item.id)">{{item.productname}}</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="menytype==='seller'" style="margin-left: 750px;font-size: medium;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link fw-bold text-light " aria-current="page" routerLink="seller-home">Product List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light " routerLink="seller-add-product">Add Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light"  tabindex="-1" aria-disabled="true" (click)="logout()" style="cursor: pointer;">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="#" tabindex="-1" aria-disabled="true" style="color: blueviolet;">{{sellername | titlecase}}</a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="menytype==='userdata'">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link fw-bold text-light " aria-current="page" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light " routerLink="seller-auth">Seller</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" (click)="userlogout()" style="cursor: pointer;">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light " routerLink="myorder">My Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light"  tabindex="-1" aria-disabled="true">{{username | titlecase}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-light" [routerLink]="addtocartcount>0?'cart':null" ><span><i class="bi bi-cart fs-5"></i></span>({{addtocartcount}})</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2 border rounded-pill" type="text" placeholder="Search" aria-label="Search" style="font-size: medium;width: 400px;" (keyup)="searchproducts($event)" (blur)="hidesearch()" #searchinput>
+          <button class="btn btn-outline-success fw-bold" type="submit" style="font-size: medium;" (click)="searchquery(searchinput.value)">Search</button>
+          <ul class="suggested" style="list-style-type: none;" *ngIf="searchresult">
+            <li *ngFor="let item of searchresult" >
+              <a style="color:black;" (mousedown)="redirecttodetails(item.id)">{{item.productname}}</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+ 
+
+  

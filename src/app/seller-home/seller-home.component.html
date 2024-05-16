@@ -1,0 +1,17 @@
+<h3 style="margin-left: 670px;font-size: large;">Product List</h3>
+<p  style="margin-left: 670px;color:red">{{deletemessage}}</p>
+<div class="container mt-4">
+<div class="row ">
+<div class="card col-4 product" style="width: 18rem;padding-right: 2px;font-size: medium;height:430px;width:300px;" *ngFor="let items of productlists" >
+    <img src={{items.producturl}} class="card-img-top" alt="..." height="250px" >
+    <div class="card-body" style="font-size: medium;">
+      <h5 class="card-title">{{items.productname}}</h5>
+      <p class="card-text">{{items.productprice}}/-</p>
+      <p class="card-text">{{items.productcolor}}</p>
+      <p class="card-text">{{items.productcategory}}</p>
+      <a class="btn btn-warning fw-bold" style="float: left;font-size: medium;" routerLink="/seller-update-product/{{items.id}}"><span><i class="bi bi-pencil-square"></i></span>Update</a>
+      <a class="btn btn-warning fw-bold" style="float: right;font-size: medium;" (click)="deleteproduct(items.id)"><span><i class="bi bi-trash"></i></span>Delete</a>
+    </div>
+  </div>
+</div>
+</div>

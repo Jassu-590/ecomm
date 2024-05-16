@@ -1,0 +1,51 @@
+<div class="container" *ngIf="popular_product">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item" *ngFor="let item of popular_product; let i = index" [class.active]="i === 0">
+         <a routerLink="/details/{{item.id}}"> <img src="{{item.producturl}}" style="width:600px;height:400px"></a>
+        </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+<br>
+<br>
+<div class="mt-3">
+  <h1 style="float: left;color: black;padding-left: 150px;">TRENDY PRODUCTS</h1>
+</div>
+<br><br><br>
+<div>
+    <div class="row " style="margin-left: 150px;margin-right: 150px;background-color: white;" >
+      <div class="col-sm-3 border border-1" style="background-color: white;font-size: medium;margin-bottom: 35px;height:480px" *ngFor="let trend of trendy_product">
+         <img src={{trend.producturl}} height="300px" width="100%" >
+         <hr>
+         <p style="font-weight: bold;" class="text-center">{{trend.productname}}</p>
+         <p  class="text-center"><b>Price:</b>&nbsp;{{trend.productprice}}/-</p>
+         <p  class="text-center"><b>color:</b>&nbsp;{{trend.productcolor}}</p>
+         <hr>
+        <a routerLink="/details/{{trend.id}}"><button style="float: left;font-size: medium;border-radius: 5px;font-weight: bold;margin-left: 90px;" class="btn btn-outline-dark">View Details</button></a> 
+      </div>  
+    </div>
+</div>
+
+
+  

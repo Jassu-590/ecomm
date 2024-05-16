@@ -1,0 +1,35 @@
+<div *ngIf="!showlogin" style="display: flex;flex-direction: column;margin: auto;" style="font-size: medium;">
+<h4 class="text-center" style="margin-top: 150px;font-size: medium;">SELLER SIGN-UP</h4>
+<div class="text-center" style="border: solid;width:300px; height :350px; border-radius: 10px;display: flex;flex-direction: column;margin: auto;">
+    <form class="mt-5" #sellersignup = "ngForm" (ngSubmit)="signup(sellersignup.value)">
+    <input type="text" placeholder="UserName" style="height: 35px;" name="name" ngModel style="border-radius: 5px;height: 40px;">
+    <br>
+    <br>
+    <input type="email"  placeholder="Email" style="height: 35px;" name="email" ngModel style="border-radius: 5px;height: 40px;">
+    <br>
+    <br>
+    <input type="password"  placeholder="Password" style="height: 35px;" name="password" ngModel style="border-radius: 5px;height: 40px;">
+    <br>
+    <br>
+    <button class="btn btn-outline-success fw-bold" style="width:190px;font-size: medium;">Sign Up</button><br><br>
+    <a (click)="openlogin()" style="cursor: pointer;color: blueviolet;font-size: medium;">Already Have Account ? Click to Login</a>
+    </form>
+</div>
+</div>
+
+<div *ngIf="showlogin" style="display: flex;flex-direction: column;margin: auto;font-size: medium;">
+<h4 class="text-center" style="margin-top: 150px;font-size: medium;">SELLER LOGIN</h4>
+<div class="text-center" style="border: solid;width:300px; height :350px; border-radius: 10px;display: flex;flex-direction: column;margin: auto;">
+    <form  #sellerlogin = "ngForm" (ngSubmit)="login(sellerlogin.value)" style="margin-top: 50px;">
+    <p style="color: red;">{{authError}}</p>
+    <input type="email"  placeholder="Email" style="height: 35px;" name="email" ngModel style="border-radius: 5px;height: 40px;">
+    <br>
+    <br>
+    <input type="password"  placeholder="Password" style="height: 35px;" name="password" ngModel style="border-radius: 5px;height: 40px;">
+    <br>
+    <br>
+    <button class="btn btn-outline-success fw-bold" style="width:190px;font-size: medium;">Login</button><br><br>
+    <a (click)="opensignup()" style="cursor: pointer;color: blueviolet;font-size: 14px;">Don't have Account ? Click to Sign up</a>
+    </form>
+</div>
+</div>

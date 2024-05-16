@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>My Orders</h1>
+    <div class="orders">
+        <div class="order">
+            <div class="order-details">
+                <ul  style="display: flex;font-weight: bold;" class="justify-content-between">
+                    <li>Order ID</li>
+                    <li>Status</li>
+                    <li>Price</li>
+                    <li><button class="btn btn-outline-success fw-bold" style="font-size: medium;">ACTION</button></li>
+                </ul>
+            </div>
+            <div style="height: 5px;width:100%;background-color: black;"></div>
+            <div class="order-details mt-4">
+                <ul *ngFor="let item of orderdata" style="display: flex;" class="justify-content-between">
+                    <li>Order ID: {{item.id}}</li>
+                    <li>Status: In Progress</li>
+                    <li>Price: {{item.totalprice}}</li>
+                    <li><button class="btn btn-outline-success fw-bold" style="font-size: medium;" (click)="cancelorder(item.id)" >Cancel Order</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

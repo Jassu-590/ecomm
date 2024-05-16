@@ -1,0 +1,149 @@
+{
+  "seller": [
+    {
+      "id": "7d35",
+      "name": "jaswanth",
+      "email": "vedhurijaswanth@gmail.com",
+      "password": "jassu123"
+    },
+    {
+      "id": "0f6c",
+      "name": "teja",
+      "email": "teja@gmail.com",
+      "password": "teja123"
+    }
+  ],
+  "product": [
+    {
+      "productname": "shirt",
+      "productprice": 699,
+      "productcolor": "white",
+      "productcategory": "shirt",
+      "producturl": "https://vpracketsports.co.uk/wp-content/uploads/2021/07/3B0A8500.jpg",
+      "description": "white shirt with medium size",
+      "id": "cc36"
+    },
+    {
+      "productname": "IQOO Z7 Pro",
+      "productprice": 23999,
+      "productcolor": "skyblue",
+      "productcategory": "mobiles",
+      "producturl": "https://i.gadgets360cdn.com/large/iqoo_z7_pro_5g_x_blue_1692606149753.jpg?downsize=950:*",
+      "description": "z7 mobile",
+      "id": "1ac7"
+    },
+    {
+      "id": "8a67",
+      "productname": "kurtha",
+      "productprice": 1199,
+      "productcolor": "black",
+      "productcategory": "men",
+      "producturl": "https://i.pinimg.com/originals/02/84/c7/0284c7b61010c95f91f65f44a907e97f.jpg",
+      "description": "bl"
+    },
+    {
+      "id": "e32b",
+      "productname": "Titan Watch",
+      "productprice": 99999,
+      "productcolor": "black",
+      "productcategory": "men",
+      "producturl": "https://timegear.in/wp-content/uploads/2021/05/1696NC01_2.jpg",
+      "description": ""
+    },
+    {
+      "id": "fc2a",
+      "productname": "1+ 12R Phone",
+      "productprice": 38999,
+      "productcolor": "grey",
+      "productcategory": "mobiles",
+      "producturl": "https://m-cdn.phonearena.com/images/articles/396456-image/OnePlus-11-scaled.jpg",
+      "description": ""
+    },
+    {
+      "id": "2f18",
+      "productname": "mini ac fan",
+      "productprice": 2999,
+      "productcolor": "white",
+      "productcategory": "fan",
+      "producturl": "https://n2.sdlcdn.com/imgs/g/4/3/2016_humidifier_fan_mini_handheld_water_air_cooling_fan_an_w0484_blue_with_mist_1_-16d6c.jpg",
+      "description": "mini ac fan"
+    },
+    {
+      "id": "cfce",
+      "productname": "Black pant",
+      "productprice": 799,
+      "productcolor": "black",
+      "productcategory": "men",
+      "producturl": "https://images.riverisland.com/is/image/RiverIsland/black-washed-skinny-fit-jeans_396077_main?$productImageLarge$",
+      "description": "black pant for men"
+    },
+    {
+      "id": "cc46",
+      "productname": "lehenga",
+      "productprice": 31999,
+      "productcolor": "red",
+      "productcategory": "women",
+      "producturl": "https://assets.vogue.in/photos/5f6c7a4c10dbc0617e889b18/2:3/w_2732%2cc_limit/Shraddha%20Kapoor%20in%20Falguni%20Shane%20Peacock%20lehenga%20from%20India%20Couture%20Week%202020.jpg",
+      "description": "lehenga for women"
+    },
+    {
+      "id": "d384",
+      "productname": "Nike Shoes",
+      "productprice": 7199,
+      "productcolor": "black",
+      "productcategory": "shoes",
+      "producturl": "https://www.prodirectfit.com/productimages/Gallery_1/V3_1_Gallery_1_0293015.jpg",
+      "description": "Nike black shoes for men"
+    }
+  ],
+  "users": [
+    {
+      "id": "9514",
+      "name": "teja",
+      "email": "teja@gmail.com",
+      "password": "teja590"
+    },
+    {
+      "id": "60a8",
+      "name": "sneha",
+      "email": "sneha2001vedula@gmail.com",
+      "password": "sneha123"
+    },
+    {
+      "id": "280a",
+      "name": "sneha",
+      "email": "sneha2001vedula@gmail.com",
+      "password": "sneha"
+    },
+    {
+      "id": "ed7b",
+      "name": "teja",
+      "email": "teja@gmail.com",
+      "password": "teja"
+    }
+  ],
+  "cart": [
+    {
+      "id": "b6ea",
+      "productname": "Titan Watch",
+      "productprice": 99999,
+      "productcolor": "black",
+      "productcategory": "men",
+      "producturl": "https://timegear.in/wp-content/uploads/2021/05/1696NC01_2.jpg",
+      "description": "",
+      "quantity": 1,
+      "userid": "280a",
+      "productid": "e32b"
+    }
+  ],
+  "orders": [
+    {
+      "id": "b3db",
+      "email": "jaswanthsai1032@gmail.com",
+      "address": "sunnambattilu",
+      "contact": "9346422924",
+      "totalprice": 7299,
+      "userid": "280a"
+    }
+  ]
+}

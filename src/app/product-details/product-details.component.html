@@ -1,0 +1,17 @@
+<div class="card">
+    <img src="{{productdetails?.producturl}}" alt="Product Image" >
+    <div class="product-name">{{productdetails?.productname}}</div>
+    <div class="product-color">Color:{{productdetails?.productcolor}}</div>
+    <div class="product-description">{{productdetails?.description}}</div>
+    <div class="product-price">&#8377;{{productdetails?.productprice}}</div>
+    <div class="quantity-container">
+        <span class="fw-bold" style="font-size: medium;">Quantity :</span> &emsp;
+        <button class="quantity-button" (click)="quantitydecrement('minus')" >-</button>&emsp;
+        <input type="text" class="quantity-input border-0" id="quantity"  value="{{quantitycount}}" >&emsp;
+        <button class="quantity-button" (click)="quantiyincrement()">+</button>
+    </div>
+    
+    <button *ngIf="!removecart" class="btn btn-light fw-bold mt-5 " style="font-size: medium;background-color: gainsboro;" (click)="AddToCart()">Add to cart</button>
+    <button *ngIf="removecart" class="btn btn-light fw-bold mt-5" style="font-size: medium;" (click)="removetocart(productdetails?.id)">remove to cart</button>
+   
+</div>

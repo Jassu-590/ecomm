@@ -1,0 +1,16 @@
+<div>
+    <div class="row " style="margin-left: 450px;margin-right: 450px;background-color: white;" >
+      <div class=" border border-1" style="background-color: white;font-size: medium;margin-bottom: 35px;height:200px" *ngFor="let item of searchresult">
+        <div style="float: left;">
+         <a routerLink="/details/{{item.id}}" >
+          <img src={{item.producturl}} height="200px" width="100%" >
+         </a>
+        </div>
+        <div style="float:left;margin-top: 40px;margin-left: 100px;">
+         <p style="font-weight: bold;" class="text-center">{{item.productname}}</p>
+         <p  class="text-center"><b>Price:{{item.productprice}}</b>&nbsp;/-</p>
+         <p  class="text-center"><b>color:{{item.productcolor}}</b>&nbsp;</p>
+        </div>
+      </div>    
+    </div>
+</div>

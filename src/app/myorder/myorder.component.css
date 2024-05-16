@@ -1,0 +1,43 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: medium;
+}
+
+h1 {
+    text-align: center;
+}
+
+.orders {
+    margin-top: 20px;
+}
+
+.order {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.order-info {
+    margin-bottom: 10px;
+}
+
+.order-info span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.order-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-details li {
+    margin-bottom: 5px;
+}
+
+
+
+
